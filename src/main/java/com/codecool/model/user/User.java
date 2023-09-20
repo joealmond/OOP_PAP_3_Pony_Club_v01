@@ -9,9 +9,9 @@ import java.util.OptionalInt;
 
 public class User {
     int count;
-    private String username;
-    private LocalDate registrationDate;
-    private List<Pony> ponies;
+    private final String username;
+    private final LocalDate registrationDate;
+    private final List<Pony> ponies;
 
     private int highestLevelPony;
 
