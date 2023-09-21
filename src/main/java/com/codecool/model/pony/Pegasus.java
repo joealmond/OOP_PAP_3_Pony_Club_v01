@@ -10,7 +10,7 @@ public class Pegasus extends Pony implements Fly {
 
     @Override
     public Position fly(Position position) {
-        this.setPosition(position);
+        this.position = position;
         System.out.println("Pony flew to: " + position);
         return position;
     }

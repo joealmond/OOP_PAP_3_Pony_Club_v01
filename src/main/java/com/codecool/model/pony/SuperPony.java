@@ -24,3 +24,5 @@ public class SuperPony extends Pony implements Fly, Magic {
         System.out.println("Evoking magical " + magicType.name());
     }
 }
+// DI,  a tulajdonság az lehetne egy osztály és azt DI-vel kapja meg.
+// Todo: protected...

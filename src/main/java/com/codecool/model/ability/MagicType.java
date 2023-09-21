@@ -14,6 +14,8 @@ public enum MagicType {
     public static MagicType[] getValues() {
         return MagicType.values();
     }
+    // van alapból az enumban
+    // plusz munka ez az osztály
 
     public String getSign(){
         return this.sign;

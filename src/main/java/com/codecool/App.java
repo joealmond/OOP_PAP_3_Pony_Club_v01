@@ -5,7 +5,7 @@ import com.codecool.model.pony.Pegasus;
 import com.codecool.model.pony.Pony;
 import com.codecool.model.pony.SuperPony;
 import com.codecool.model.pony.Unicorn;
-import com.codecool.model.user.Register;
+import com.codecool.logic.Register;
 import com.codecool.model.user.User;
 import com.codecool.view.UiControl;
 

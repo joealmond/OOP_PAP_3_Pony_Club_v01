@@ -13,7 +13,8 @@ public class Unicorn extends Pony implements Magic {
     public void doMagic(int ordinal) {
         MagicType magicType = MagicType.getValues()[ordinal];
         this.increaseLevel();
-        this.setName(getName() + " " + magicType.getSign());
+        name = name + " " + magicType.getSign();
+        // protected !!!
         System.out.println("Evoking magical " + magicType.name());
     }
 }

@@ -5,24 +5,26 @@ import com.codecool.model.Direction;
 import com.codecool.model.Position;
 
 public class Pony {
-    private String name;
-    private Position position;
+    protected String name;
+    // a package pvt-el módosítások után nem tudjuk garantálni...
+    protected Position position;
     private int level;
-    private int LEVLEL_INCREASE_AMOUNT = 1;
-    String type;
+    private static final int LEVEL_INCREASE_AMOUNT = 1;
+    // csak így konstans!!!
+//    private String type;
 
     public Pony(String name) {
         this.name = name;
         this.position = new Position(0, 0);
         this.level = 0;
-        this.type = this.getClass().getSimpleName();
+//        this.type = this.getClass().getSimpleName();
     }
 
-    public Position walkTo(Direction direction) {
-        Position newPosition = this.position.moveToDirection(direction);
+    public void walkTo(Direction direction) {
+        Position newPosition = this.position.getNextPosition(direction);
         this.position = newPosition;
         System.out.println("Pony heading to " + direction.name());
-        return newPosition;
+//        return newPosition;
     }
 
     public String getName() {
@@ -36,6 +38,7 @@ public class Pony {
 
     public Position getPosition() {
         System.out.print("Pony is @: ");
+        // PA-n nem kell sout..
         return position.getPosition();
     }
 
@@ -44,22 +47,22 @@ public class Pony {
     }
 
     void increaseLevel() {
-        this.level = level + LEVLEL_INCREASE_AMOUNT;
+        this.level += LEVEL_INCREASE_AMOUNT;
     }
 
     public int getLevel() {
         return level;
     }
 
-    public String getType() {
-        return type;
-    }
+//    public String getType() {
+//        return type;
+//    }
 
     @Override
     public String toString() {
         return "Pony{" +
                 "name='" + name + '\'' +
-                "type='" + type + '\'' +
+//                "type='" + type + '\'' +
                 ", position=" + position +
                 ", level=" + level +
                 '}';
